@@ -1,4 +1,4 @@
-import { Point } from "src/core/objects/point";
+import { Point } from "src/core/axioms/definitions/objects/point";
 import { BaseObject } from "./baseObject";
 
 /**
