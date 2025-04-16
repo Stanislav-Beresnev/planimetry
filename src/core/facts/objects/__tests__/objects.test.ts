@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { BaseObject } from "src/core/facts/axioms/definitions/objects/baseObject";
-import { Point } from "src/core/facts/axioms/definitions/objects/point";
-import { LineSegment } from "src/core/facts/axioms/definitions/objects/lineSegment";
+import { BaseObject } from "src/core/facts/objects/baseObject";
+import { Point } from "src/core/facts/objects/point";
+import { LineSegment } from "src/core/facts/objects/lineSegment";
 
 describe("base objects", () => {
   test("point is BaseObject (checking vite-tsconfig-paths)", () => {
@@ -12,6 +12,7 @@ describe("base objects", () => {
   test("point name", () => {
     const point = new Point("A");
     expect(point.getName()).toBe("A");
+    expect(point.getTypedName()).toBe("point_A");
   });
 
   test("line segment name", () => {
@@ -19,5 +20,6 @@ describe("base objects", () => {
     const point2 = new Point("B");
     const lineSegment = new LineSegment(point1, point2);
     expect(lineSegment.getName()).toBe("AB");
+    expect(lineSegment.getTypedName()).toBe("lineSegment_AB");
   });
 });
