@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { BaseObject } from "src/core/facts/objects/baseObject";
-import { Point } from "src/core/facts/objects/point";
-import { LineSegment } from "src/core/facts/objects/lineSegment";
+import { BaseObject } from "@core/facts/objects/baseObject";
+import { Point } from "@core/facts/objects/point";
+import { LineSegment } from "@core/facts/objects/lineSegment";
 
 describe("base objects", () => {
   test("point is BaseObject (checking vite-tsconfig-paths)", () => {

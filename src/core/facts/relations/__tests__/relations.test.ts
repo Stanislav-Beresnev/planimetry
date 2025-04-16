@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
-import { Point } from "src/core/facts/objects/point";
-import { LineSegment } from "src/core/facts/objects/lineSegment";
+import { Point } from "@core/facts/objects/point";
+import { LineSegment } from "@core/facts/objects/lineSegment";
 
 describe("relations objects", () => {
   test("point in line segment", () => {

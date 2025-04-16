@@ -1,6 +1,6 @@
-import { LineSegment } from "src/core/facts/objects/lineSegment";
-import { Point } from "src/core/facts/objects/point";
-import { Relation } from "src/core/facts/relations/relation";
+import { LineSegment } from "@core/facts/objects/lineSegment";
+import { Point } from "@core/facts/objects/point";
+import { Relation } from "@core/facts/relations/relation";
 
 /**
  * @description Точка служит концом отрезка
