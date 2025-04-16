@@ -1,15 +1,13 @@
 import { describe, expect, test } from "vitest";
 import { Point } from "@core/facts/objects/point";
 import { LineSegment } from "@core/facts/objects/lineSegment";
+import { Model } from "@core/model/model";
 
-describe("relations tests", () => {
-  test("point in line segment", () => {
+describe("model tests", () => {
+  test("init model", () => {
     const pointA = new Point("A");
     const pointB = new Point("B");
-    const pointC = new Point("C");
     const lineSegment = new LineSegment(pointA, pointB);
-    expect(lineSegment.hasPoint(pointA)).toBeTruthy();
-    expect(lineSegment.hasPoint(pointB)).toBeTruthy();
-    expect(lineSegment.hasPoint(pointC)).toBeFalsy();
+    const model = new Model([pointA, pointB, lineSegment], []);
   });
 });

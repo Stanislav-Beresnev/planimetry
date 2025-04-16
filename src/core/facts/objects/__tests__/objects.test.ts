@@ -3,7 +3,7 @@ import { BaseObject } from "@core/facts/objects/baseObject";
 import { Point } from "@core/facts/objects/point";
 import { LineSegment } from "@core/facts/objects/lineSegment";
 
-describe("base objects", () => {
+describe("objects tests", () => {
   test("point is BaseObject (checking vite-tsconfig-paths)", () => {
     const point = new Point("A");
     expect(point instanceof BaseObject).toBeTruthy();
