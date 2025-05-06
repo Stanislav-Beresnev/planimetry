@@ -7,6 +7,7 @@ import { OBJECT_TYPES } from "@core/facts/objectTypes";
  */
 export class LineSegment extends BaseObject {
   override type = OBJECT_TYPES.lineSegment;
+  private innerPoints: Point[] = [];
   /**
    * @param startPoint - точка начала отрезка;
    * @param endPoint - точка конца отрезка;
@@ -18,11 +19,31 @@ export class LineSegment extends BaseObject {
     super();
   }
 
+  private getAllPoints(): Point[] {
+    return [this.startPoint, ...this.innerPoints, this.endPoint];
+  }
+
   override getName(): string {
     return `${this.startPoint.getName()}${this.endPoint.getName()}`;
   }
 
-  public hasPoint(point: Point): boolean {
+  public isEndPoint(point: Point): boolean {
     return [this.startPoint, this.endPoint].includes(point);
+  }
+
+  public hasPoint(point: Point): boolean {
+    return this.getAllPoints().includes(point);
+  }
+
+  public isInnerPoint(point: Point): boolean {
+    return this.innerPoints.includes(point);
+  }
+
+  public markPoint(point: Point): boolean {
+    const marked = this.innerPoints.includes(point);
+    if (!marked) {
+      this.innerPoints.push(point);
+    }
+    return !marked;
   }
 }

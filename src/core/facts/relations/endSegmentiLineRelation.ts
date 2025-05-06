@@ -17,6 +17,6 @@ export class EndSegmentLineRelation extends Relation {
     super();
   }
   public override check(): boolean {
-    return this.lineSegment.hasPoint(this.point);
+    return this.lineSegment.isEndPoint(this.point);
   }
 }
