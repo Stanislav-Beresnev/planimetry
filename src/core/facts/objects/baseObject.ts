@@ -1,8 +1,4 @@
-import { OBJECT_TYPES } from "@core/facts/objectTypes";
-
-export interface IBaseObject {
-  getTypedName(): string;
-}
+import { IBaseObject, OBJECT_TYPES } from "@core/facts/types/objectTypes";
 
 /**
  * @description Базовый объект для основных понятий планиметрии;

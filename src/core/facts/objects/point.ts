@@ -1,4 +1,4 @@
-import { OBJECT_TYPES } from "@core/facts/objectTypes";
+import { OBJECT_TYPES } from "@core/facts/types/objectTypes";
 import { BaseObject } from "./baseObject";
 
 /**

@@ -1,6 +1,6 @@
 import { Point } from "@core/facts/objects/point";
 import { BaseObject } from "./baseObject";
-import { OBJECT_TYPES } from "@core/facts/objectTypes";
+import { OBJECT_TYPES } from "@core/facts/types/objectTypes";
 
 /**
  * @description Отрезок
