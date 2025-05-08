@@ -2,18 +2,11 @@ import { Point } from "@core/facts/objects/point";
 import { BaseObject } from "./baseObject";
 import { OBJECT_TYPES } from "@core/facts/types/objectTypes";
 
-/**
- * @description Отрезок
- */
 export class LineSegment extends BaseObject {
   override type = OBJECT_TYPES.lineSegment;
 
   private innerPoints: Point[] = [];
 
-  /**
-   * @param startPoint - точка начала отрезка;
-   * @param endPoint - точка конца отрезка;
-   */
   constructor(
     private readonly startPoint: Point,
     private readonly endPoint: Point
