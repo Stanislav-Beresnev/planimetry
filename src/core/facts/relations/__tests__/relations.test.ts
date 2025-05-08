@@ -13,9 +13,9 @@ describe("relations tests", () => {
     expect(lineSegment.hasPoint(pointB)).toBeTruthy();
     expect(lineSegment.hasPoint(pointC)).toBeFalsy();
 
-    expect(lineSegment.isEndPoint(pointA)).toBeTruthy();
-    expect(lineSegment.isEndPoint(pointB)).toBeTruthy();
-    expect(lineSegment.isEndPoint(pointC)).toBeFalsy();
+    expect(lineSegment.isEdgePoint(pointA)).toBeTruthy();
+    expect(lineSegment.isEdgePoint(pointB)).toBeTruthy();
+    expect(lineSegment.isEdgePoint(pointC)).toBeFalsy();
 
     expect(lineSegment.isInnerPoint(pointA)).toBeFalsy();
     expect(lineSegment.isInnerPoint(pointB)).toBeFalsy();
@@ -33,9 +33,9 @@ describe("relations tests", () => {
     expect(lineSegment.hasPoint(pointB)).toBeTruthy();
     expect(lineSegment.hasPoint(pointC)).toBeTruthy();
 
-    expect(lineSegment.isEndPoint(pointA)).toBeTruthy();
-    expect(lineSegment.isEndPoint(pointB)).toBeTruthy();
-    expect(lineSegment.isEndPoint(pointC)).toBeFalsy();
+    expect(lineSegment.isEdgePoint(pointA)).toBeTruthy();
+    expect(lineSegment.isEdgePoint(pointB)).toBeTruthy();
+    expect(lineSegment.isEdgePoint(pointC)).toBeFalsy();
 
     expect(lineSegment.isInnerPoint(pointA)).toBeFalsy();
     expect(lineSegment.isInnerPoint(pointB)).toBeFalsy();
